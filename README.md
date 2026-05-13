@@ -1,2 +1,0 @@
-# LimbusCompany
-Repositorio personal
