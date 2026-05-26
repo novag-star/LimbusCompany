@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:controller="co.edu.uniquindio.poo.inmobilaria.controller.SistemaVendedoresController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="646.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26">
+  <tabs>
+    <Tab text="SISTEMA">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="54.0" layoutY="199.0" text="BIENVENIDO AL SISTEMA DE VENDEDORES">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="194.0" layoutY="254.0" text="Encontrara las funciones en las paginas de arriba" />
+                  <Button fx:id="btnCerrarSesionW4" layoutX="14.0" layoutY="506.0" mnemonicParsing="false" onAction="#ActionCerrarSesionW4" text="Cerrar Sesion" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Publicar Inmueble">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="26.0" text="Publicar Nuevo Inmueble" textFill="#0099ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="91.0" text="Codigo" />
+                  <TextField fx:id="txtCodigoNiW4" layoutX="99.0" layoutY="87.0" onKeyTyped="#KeyTypedCodigoNiW4" prefHeight="25.0" prefWidth="185.0" />
+                  <Label layoutX="304.0" layoutY="91.0" text="Tipo Inmueble" />
+                  <ComboBox fx:id="cbTipoInmuebleNiW4" layoutX="406.0" layoutY="87.0" prefHeight="25.0" prefWidth="185.0" />
+                  <Label layoutX="14.0" layoutY="157.0" text="Ciudad" />
+                  <Label layoutX="317.0" layoutY="157.0" text="Direccion" />
+                  <Label layoutX="21.0" layoutY="216.0" text="Area" />
+                  <Label layoutX="326.0" layoutY="216.0" text="Precio" />
+                  <TextField fx:id="txtCiudadNiW4" layoutX="99.0" layoutY="153.0" onKeyTyped="#KeyTypedCiudadNiW4" prefWidth="185.0" />
+                  <TextField fx:id="txtDireccionNiW4" layoutX="406.0" layoutY="153.0" onKeyTyped="#KeyTipedDireccionNiW4" prefWidth="185.0" />
+                  <TextField fx:id="txtAreaNiW4" layoutX="99.0" layoutY="212.0" onKeyTyped="#KeyTipedAreaNiW4" prefWidth="185.0" />
+                  <TextField fx:id="txtPrecioNiW4" layoutX="406.0" layoutY="212.0" onKeyTyped="#KeyTipedPrecioNiW4" prefWidth="185.0" />
+                  <Button fx:id="btnLimpiarDatosNiW4" layoutX="46.0" layoutY="379.0" mnemonicParsing="false" onAction="#ActionLimpiarDatosNiW4" prefHeight="39.0" prefWidth="181.0" text="Limpiar Datos" />
+                  <Button fx:id="btnPublicarInmuebleNiW4" layoutX="419.0" layoutY="380.0" mnemonicParsing="false" onAction="#ActionPublicarInmuebleNiW4" prefHeight="37.0" prefWidth="181.0" text="Publicar Inmueble" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Mis Inmuebles">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="24.0" text="Mis inmuebles" textFill="#0099ff">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TablaMiW4" layoutX="28.0" layoutY="91.0" onMouseClicked="#MouseClickedMiW4" prefHeight="270.0" prefWidth="585.0">
+                    <columns>
+                      <TableColumn fx:id="ColCodigoMiW4" prefWidth="75.0" text="Codigo" />
+                      <TableColumn fx:id="ColTipoMiW4" prefWidth="75.0" text="Tipo" />
+                        <TableColumn fx:id="ColCiudadMiW4" prefWidth="75.0" text="Ciudad" />
+                        <TableColumn fx:id="ColPrecioActualMiW4" prefWidth="107.99995422363281" text="Precio Actual" />
+                        <TableColumn fx:id="ColDireccionMiW4" prefWidth="85.33331298828125" text="Direccion" />
+                        <TableColumn fx:id="ColEstadoMiW4" prefWidth="81.33334350585938" text="Estado" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btnCambiarPrecioMiW4" layoutX="389.0" layoutY="400.0" mnemonicParsing="false" onAction="#ActionCambiarPrecioMiW4" prefHeight="52.0" prefWidth="223.0" text="Cambiar Precio">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminarInmuebleMiW4" layoutX="28.0" layoutY="400.0" mnemonicParsing="false" onAction="#ActionEliminarInmuebleMiW4" prefHeight="52.0" prefWidth="224.0" text="Eliminar Inmueble">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Ofertas">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="39.0" prefHeight="36.0" prefWidth="251.0" text="Revise Sus Ofertas" textFill="#0099ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TablaOfertasRoW4" layoutX="35.0" layoutY="107.0" onMouseClicked="#MouseclickedTablaOfertasRoW4" prefHeight="200.0" prefWidth="583.0">
+                    <columns>
+                      <TableColumn fx:id="ColCodigoInmuebleRoW4" prefWidth="113.99999618530273" text="Codigo Inmueble" />
+                      <TableColumn fx:id="ColTipoInmuebleRoW4" prefWidth="97.3333740234375" text="Tipo Inmueble" />
+                        <TableColumn fx:id="ColCompradorRoW4" prefWidth="96.00007629394531" text="Comprador" />
+                        <TableColumn fx:id="ColPrecioOriginalRoW4" prefWidth="105.333251953125" text="Precio Original" />
+                        <TableColumn fx:id="ColPrecioOfertaRoW4" prefWidth="92.66659545898438" text="Precio Oferta" />
+                        <TableColumn fx:id="ColEstadoRoW4" prefWidth="76.6666259765625" text="Estado" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btnRechazarOfertaRoW4" layoutX="48.0" layoutY="409.0" mnemonicParsing="false" onAction="#ActionRechazarOfertaRoW4" prefHeight="40.0" prefWidth="150.0" text="Rechazar Oferta" />
+                  <Button fx:id="btnAceptarOfertaRoW4" layoutX="430.0" layoutY="409.0" mnemonicParsing="false" onAction="#ActionAceptarOfertaRoW4" prefHeight="40.0" prefWidth="150.0" text="Aceptar Oferta" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Reportes">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="18.0" layoutY="33.0" text="Aca estan los reportes del sistema:" textFill="#0099ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="92.0" text="Inmuebles mas vendidos:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="92.0" text="Ciudades con mayor demanda:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="315.0" text="Compradores mas activos:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="315.0" text="Vendedores con mas propiedades:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="18.0" layoutY="125.0" prefHeight="162.0" prefWidth="289.0">
+                    <columns>
+                      <TableColumn fx:id="ColTipoInmuebleRIMM" prefWidth="135.33333778381348" text="Tipo Inmueble" />
+                        <TableColumn fx:id="ColCiudadRIMM" prefWidth="153.33335876464844" text="Ciudad" />
+                    </columns>
+                  </TableView>
+                  <TableView layoutX="342.0" layoutY="125.0" prefHeight="162.0" prefWidth="290.0">
+                    <columns>
+                      <TableColumn fx:id="ColNombreCiudadRCcMD" prefWidth="288.6666564941406" text="Nombre de la ciudad" />
+                    </columns>
+                  </TableView>
+                  <TableView layoutX="18.0" layoutY="357.0" prefHeight="157.0" prefWidth="299.0">
+                    <columns>
+                      <TableColumn fx:id="ColPuntosRcma" prefWidth="75.0" text="Puntos" />
+                      <TableColumn fx:id="ColNombreRcma" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="ColTelefonoRcma" prefWidth="75.0" text="Telefono" />
+                        <TableColumn fx:id="ColCorreoRcma" prefWidth="75.0" text="Correo" />
+                    </columns>
+                  </TableView>
+                  <TableView layoutX="342.0" layoutY="357.0" prefHeight="157.0" prefWidth="277.0">
+                    <columns>
+                      <TableColumn fx:id="ColNumeroPropiedadesRvcmp" prefWidth="133.99993896484375" text="Numero Propiedades" />
+                      <TableColumn fx:id="ColNombreRvcmp" prefWidth="66.66659545898438" text="Nombre" />
+                        <TableColumn fx:id="ColTelefonoRvcmp" prefWidth="75.0" text="Telefono" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Mi perfil">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="54.0" layoutY="26.0" prefHeight="45.0" prefWidth="127.0" text="PERFIL" textFill="#0099ff">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="227.0" fitWidth="222.0" layoutX="7.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@UserImage.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="285.0" layoutY="120.0" text="Nombre:" />
+                  <Label layoutX="285.0" layoutY="182.0" text="Telefono:" />
+                  <Label layoutX="35.0" layoutY="327.0" text="Mi nivel De Puntuacion:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labNivelPuntosW4" layoutX="36.0" layoutY="378.0" text="Nivel" />
+                  <TextField fx:id="txtNombrePW4" layoutX="342.0" layoutY="116.0" onKeyTyped="#KeyTypedNombrePW4" />
+                  <TextField fx:id="txtTelefonoPW4" layoutX="342.0" layoutY="178.0" onKeyTyped="#KeyTypedTelefonoPW4" />
+                  <Button fx:id="btnCambiarNombrePW4" layoutX="524.0" layoutY="116.0" mnemonicParsing="false" onAction="#ActionCambiarNombrePW4" text="Cambiar" />
+                  <Button fx:id="btnCambiarTelefonoPW4" layoutX="524.0" layoutY="178.0" mnemonicParsing="false" onAction="#ActionCambiarTelefonoPW4" text="Cambiar" />
+                  <Button fx:id="btnCerrarSesionPW4" layoutX="26.0" layoutY="482.0" mnemonicParsing="false" onAction="#ActionCerrarSesionPW4" prefHeight="35.0" prefWidth="169.0" text="Cerrar Sesion" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
